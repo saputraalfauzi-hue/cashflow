@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    transition: background 0.3s, color 0.2s;
+    padding: 16px;
+}
+
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 30px;
+    background: rgba(0,0,0,0.05);
+}
+
+body.dark .theme-btn {
+    background: #2c2c2c;
+    color: #ffd966;
+}
+
+.saldo-card {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+body.dark .saldo-card {
+    background: #1e1e2f;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.saldo-label {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    display: block;
+}
+
+.saldo-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.saldo-value.positif {
+    color: #2e7d32;
+}
+
+.saldo-value.negatif {
+    color: #c62828;
+}
+
+body.dark .saldo-value.positif {
+    color: #66bb6a;
+}
+body.dark .saldo-value.negatif {
+    color: #ef5350;
+}
+
+.form-card {
+    background: white;
+    border-radius: 24px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.dark .form-card {
+    background: #1e1e2f;
+}
+
+select, input {
+    padding: 14px 16px;
+    border-radius: 40px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background: white;
+}
+
+body.dark select, body.dark input {
+    background: #2c2c2c;
+    border-color: #444;
+    color: white;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    border: none;
+    padding: 14px;
+    border-radius: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 6px;
+}
+
+.btn-edit { color: #ffa000; }
+.btn-delete { color: #d32f2f; }
+
+.charts-section {
+    margin-bottom: 24px;
+}
+
+.chart-switch {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.chart-switch-btn {
+    background: #e9ecef;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body.dark .chart-switch-btn {
+    background: #2c2c2c;
+    color: #ccc;
+}
+
+.chart-switch-btn.active {
+    background: #0d6efd;
+    color: white;
+}
+
+.chart-container {
+    display: none;
+}
+
+.chart-container.active {
+    display: block;
+}
+
+.chart-box {
+    background: white;
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+body.dark .chart-box {
+    background: #1e1e2f;
+}
+
+.chart-box h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    background: transparent;
+}
+
+.persen-info {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.history-section {
+    background: white;
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.dark .history-section {
+    background: #1e1e2f;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    gap: 12px;
+}
+
+#filterJenis {
+    padding: 8px 16px;
+    border-radius: 30px;
+    width: auto;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+th, td {
+    padding: 12px 6px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+body.dark th, body.dark td {
+    border-bottom-color: #2c2c2c;
+}
+
+th {
+    background: #f8f9fa;
+}
+
+body.dark th {
+    background: #2c2c2c;
+}
+
+@media (max-width: 500px) {
+    body { padding: 12px; }
+    .saldo-value { font-size: 1.8rem; }
+    td, th { font-size: 0.75rem; padding: 8px 4px; }
+    .btn-edit, .btn-delete { font-size: 1rem; }
+    .chart-switch-btn { padding: 6px 12px; font-size: 0.75rem; }
+}
